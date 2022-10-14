@@ -1,0 +1,133 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overscroll-behavior-y: contain;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	background: #aebdca;
+	font-family: sans-serif;
+}
+
+*::selection {
+	background-color: #100f0f;
+	color: #4d77ff;
+}
+
+input[type="checkbox"] {
+	accent-color: #4d77ff;
+}
+
+.random {
+	animation: animate 2000ms linear infinite !important;
+	border-radius: 50%;
+}
+
+@keyframes animate {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 99, 0.5);
+		border-radius: 50%;
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(255, 26, 67, 0);
+		border-radius: 50%;
+	}
+}
+
+.left h4,
+.left h6 {
+	font-family: "Press Start 2P", cursive;
+	text-decoration: underline;
+	color: #4d77ff;
+}
+
+.score,
+.high {
+	color: #4d77ff !important;
+}
+
+.left p,
+.left span,
+.left label {
+	color: #ece5c7;
+	font-weight: 800;
+}
+
+.left span:last-child {
+	font-weight: 600;
+}
+
+#speed {
+	font-weight: 500;
+	border-radius: 0;
+	width: 150px;
+	padding: 0.2rem 0.3rem;
+	font-size: 0.9rem;
+	border: none !important;
+	background: #ece5c7;
+	box-shadow: none !important;
+}
+
+#snake-world {
+	width: 55rem;
+	background-color: #171829;
+	background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	padding: 1rem 1rem 1rem;
+	margin: 0.5rem;
+	color: #f2f2f2;
+	display: flex;
+	justify-content: space-between;
+	/* flex-direction: column; */
+}
+
+/* change background image */
+#snake-boxes {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap;
+	width: 40rem;
+	background: #dfe8cc;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+/* change border radius and border */
+.snake-box {
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.snake-box:nth-child(723) {
+	border-radius: 0 10px 10px 0;
+}
+
+.snake-dots {
+	background-color: #dfe8cc;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+}
+
+@media (max-width: 400px) {
+	html {
+		zoom: 40.5%;
+	}
+	#snake-world {
+		width: 100%;
+	}
+	.left {
+		font-size: 1.2rem !important;
+	}
+}
